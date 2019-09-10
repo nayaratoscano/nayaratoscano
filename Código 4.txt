@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main (){
+  // Inclusão da formatação em português
+  setlocale(LC_ALL,"Portuguese");
+  
+  // Identificação do tipo da variável  
+  float x=0.0, comando1, resultado; 
+
+  //Inserção do menu da atividade
+  printf("Qual o valor da raiz quadrada de um número?\n\n"); 
+
+  //Inserção dos valores
+  printf("Digite o valor:");
+  scanf ("%f", &x);
+ 
+  printf("Digite o número 3 para efetuar o cálculo:");
+  scanf ("%f", &comando1);
+  
+  //Operação requerida
+  resultado = sqrt(x);
+  
+  //Mostra o resultado
+  if (comando1 == 3) {
+  printf("O valor da raiz quadrada do número escolhido é %.1e \n", resultado);
+  }
+  else {
+  printf("Não foi escolhido a opção correta.");
+  }
+
+  //retorno da função main  
+  return 0;
+}

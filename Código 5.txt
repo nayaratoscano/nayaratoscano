@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include "stdbool.h"
+#include <locale.h>
+
+int main (){
+  // Inclusão da formatação em português
+  setlocale(LC_ALL,"Portuguese");
+  
+  // Identificação do tipo da variável  
+  int ano;
+  bool bissexto;
+ 
+  //Inserção do menu da atividade
+  printf("Digite o ano: ");
+ 
+  //Inserção dos valores
+  scanf("%d", &ano);
+ 
+ //Inclusão da função condicional
+  if (ano % 400 == 0) {
+    bissexto = true;    
+  }
+    else if ((ano % 4 == 0) && (ano % 100 != 0)) {
+      bissexto = true;    
+    }
+    else {
+      bissexto = false;
+    }
+
+  //Mostra o resultado
+  if (bissexto == true) {
+    printf("O ano é bissexto!");
+    } else {
+      printf("O ano não é bissexto!");
+    }
+}

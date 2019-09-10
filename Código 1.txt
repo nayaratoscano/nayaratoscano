@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main (){
+  // Inclusão da formatação em português
+  setlocale(LC_ALL,"Portuguese");
+  
+  // Identificação do tipo da variável  
+  int X;
+
+  //Solicite que o usuário informe o valor de X
+  printf("Tente acertar o número escolhido!!!\n");
+  printf("\nDigite um valor entre 0 e 9 : ");
+
+  //Ler a informação solicitada
+  scanf ("%d", &X);
+
+  //Inclusão da função condicional
+    while (X >= 1 && X <= 9) {
+      printf ("Digite um valor entre 0 e 9 : ");
+      scanf ("%d", &X);
+    }
+      if (X >= 10) {
+      printf ("Valor inexistente ");
+    }
+    else {
+      printf ("Concluído com sucesso");
+    }
+}
+

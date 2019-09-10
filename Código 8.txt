@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main (){
+  // Inclusão da formatação em português
+  setlocale(LC_ALL,"Portuguese");
+  
+  // Identificação do tipo da variável  
+  int nome;
+  float matricula, comando1; 
+
+  //Inserção do menu da atividade
+  printf("Informe seus dados\n\n"); 
+
+  //Inserção dos valores
+  printf("1.Informe o seu nome\t");
+  scanf ("%d", &nome);
+
+  printf("2.Informe sua matrícula:\t");
+  scanf ("%e", &matricula);
+
+  //Mostra o resultado
+  if(nome != 0) {
+    printf("\nDigite o número 9 para continuar é");
+  }
+
+  if (comando1 == 9) {
+    printf("\nSua matrícula em hexadecimal é %e\n", matricula);
+  }
+  else {
+    printf("Não foi escolhida a opção correta.");
+  }
+
+ //retorno da função main  
+  return 0;
+}

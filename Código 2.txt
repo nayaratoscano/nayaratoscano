@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main (){
+  // Inclusão da formatação em português
+  setlocale(LC_ALL,"Portuguese");
+
+  // Identificação do tipo da variável    
+  int x;
+  
+  //Solicite que o usuário informe o valor de X
+  printf("Digite um número:");
+
+  //Leitura da informação solicitada
+  scanf("%d", &x);
+  
+  //Inclusão da função condicional
+  if(x % 2 == 0){
+  printf("O número escolhido é par.");
+  }
+  else {
+  printf("O número escolhido é ímpar.");
+  }
+  return 0;
+}
+
